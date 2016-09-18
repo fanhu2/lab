@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>css动画</title>
+  <style>
+* {
+  box-sizing: border-box;
+}
+html, body {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+.outer{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -100px 0 0 -100px;
+}
+.link1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid red;
+  border-bottom: 2px solid transparent;
+  animation:mymove 5s linear infinite;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+.link2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid green;
+  border-bottom: 2px solid transparent;
+  animation:mymove 5s linear infinite;
+  position: absolute;
+  left: 75px;
+  top: 75px;
+}
+.link3 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid blue;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+  animation:mymove1 5s linear infinite;
+  position: absolute;
+  left: 65px;
+  top: 65px;
+}
+.link1-line {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #dedede;
+  position: absolute;
+  left: 51px;
+  top: 51px;
+}
+.link2-line {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #dedede;
+  position: absolute;
+  left: 76px;
+  top: 76px;
+}
+.link3-line {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #dedede;
+  position: absolute;
+  left: 66px;
+  top: 66px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  background: url(http://pic72.nipic.com/file/20150715/20085612_110330297207_2.jpg) no-repeat;
+  background-size: contain;
+  position: absolute;
+  animation:mymove2 1s linear infinite;
+  left: 85px;
+  top: 85px;
+}
+@keyframes mymove
+{
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+@keyframes mymove1
+{
+  from {transform:rotate(0deg);}
+  to {transform:rotate(-360deg);}
+}
+@keyframes mymove2
+{
+  33% {transform:scale(1.1);}
+  66% {transform:scale(1.0);}
+  100% {transform:scale(0.9);}
+}
+</style>
+</head>
+<body>
+  <div class="outer">
+    <div class="link1-line"></div>
+    <div class="link1"></div>
+    <div class="link2-line"></div>
+    <div class="link2"></div>
+    <div class="link3-line"></div>
+    <div class="link3"></div>
+    <div class="icon"></div>
+  </div>
+</body>
+</html>
